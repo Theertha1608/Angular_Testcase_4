@@ -1,0 +1,38 @@
+.home-container{
+    padding-top: 0;
+    margin: 0;
+    height: 400px;
+    width: 100%;
+    background-image: url("../../assets/Images/Mountain.jpg");
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    margin: 0;
+    color: rgb(0, 0, 0);
+    padding-top: 100px;
+    padding-left: 80px;
+    font-size: 50px;
+    text-decoration: und;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    margin: 80px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #ffffff; 
+    color:#000000;
+}

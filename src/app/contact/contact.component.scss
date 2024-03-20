@@ -1,0 +1,30 @@
+.product-container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(to bottom, #ffffff,  #175e54);
+}
+
+.footer {
+    background-color:  #175e54;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .list {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .list li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .list li:last-child {
+    margin-right: 0;
+  }
+  
+  .Copyright {
+    font-size: 14px;
+  }
+  
