@@ -6,23 +6,26 @@ import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
     {
-        component: HomeComponent,
         path:'', 
+        component: HomeComponent
     },
     {
-        component: HomeComponent, 
-        path:'home-component',
+        path:"about-component",
+        loadComponent: () => import('./about/about.component').then((c) => c.AboutComponent)
     },
     {
-        component: AboutComponent,
-        path:'about-component',
+        path:"product-component",
+        loadComponent: () => import('./product/product.component').then((c) => c.ProductComponent),
+        children:[
+            {
+                path:'id',
+                loadComponent: () => import('./product-details/product-details.component').then((c) => c.ProductDetailsComponent)
+            },
+        ]
+        
     },
     {
-        component: ProductComponent,
-        path:'product-component',
-    },
-    {
-        component: ContactComponent,
-        path:'contact-component',
+        path:"contact-component",
+        loadComponent: () => import('./contact/contact.component').then((c) => c.ContactComponent)
     },
 ];

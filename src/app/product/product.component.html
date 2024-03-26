@@ -1,61 +1,19 @@
 <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Product 1</td>
-        <td>Description of Product 1</td>
-        <td>19.99 Rs</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Product 2</td>
-        <td>Description of Product 2</td>
-        <td>24.99 Rs</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Product 3</td>
-        <td>Description of Product 3</td>
-        <td>450.00 Rs</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Product 4</td>
-        <td>Description of Product 4</td>
-        <td>999.00 Rs</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Product 5</td>
-        <td>Description of Product 5</td>
-        <td>120.00 Rs</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>Product 6</td>
-        <td>Description of Product 6</td>
-        <td>1200.00 Rs</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Product 7</td>
-        <td>Description of Product 7</td>
-        <td>590.00 Rs</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Product 8</td>
-        <td>Description of Product 8</td>
-        <td>670.00 Rs</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td><a [routerLink]="['/product', product.id]">{{ product.name }}</a></td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }} Rs</td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
