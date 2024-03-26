@@ -18,8 +18,8 @@ export const routes: Routes = [
         loadComponent: () => import('./product/product.component').then((c) => c.ProductComponent),
         children:[
             {
-                path:'id',
-                loadComponent: () => import('./product-details/product-details.component').then((c) => c.ProductDetailsComponent)
+                path:':id',
+                loadComponent: () => import('./details/details.component').then((c) => c.DetailsComponent)
             },
         ]
         
